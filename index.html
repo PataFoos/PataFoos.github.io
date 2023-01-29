@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./slider.js" async></script>
+  <title>JC Photography</title>
+</head>
+
+<body>
+    <nav id="nav-main">
+      <a href="#" id="nav-logo">
+        <img id="nav-shutter" src="./img/logo-cam.png" alt="logo">
+        <div id="nav-nombre">
+          <span id="jc">JC</span><span id="nav-photo">Photography</span>
+        </div>
+      </a>
+      <div id="nav-menu">
+        <a href="#Clyde" class="nav-menu-item smooth">Clyde Harris</a>
+        <a href="#Portfolio" class="nav-menu-item smooth">Portfolio</a>
+        <a href="#Contacto" class="nav-menu-item smooth">Contacto</a>
+      </div>
+    </nav>
+      
+      
+    <div class="diagonal home" id="Clyde">
+      <div class="contenido">        
+        <img class="foto-perfil" src="./img/perfil.jpg" alt="">
+        <div class="texto-intro">
+          <h1>Clyde Harris</h1>
+          <p>
+            Óxido...<br /><br />       
+            Siempre me llamó la atención este fenómeno, este registro visual del inexorable paso del tiempo.
+            Desde niño intentaba retratar cualquier hierro que tuviera este color y esta textura, ese perfume
+            tan particular.
+            <br/><br />
+            Hoy he transformado ese hobby en mi modo de vida, llevo el óxido en la sangre, y allí donde muestro
+            mi arte, hago feliz a la gente con mis preciados recuerdos. Por suerte puedo vivir de esto, y la moda
+            de retratar el óxido llegó para quedarse.
+          </p>
+        </div>
+      </div>      
+    </div>
+
+    <div class="diagonal portfolio" id="Portfolio">
+      <div class="contenido">
+        <h1>Mi portfolio</h1>
+
+        <!-- inicio slider  -->
+        <div class="slider">
+
+          <div class="slide">
+            <img src="./img/oxido0.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="./img/oxido1.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="./img/oxido2.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="./img/oxido3.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="./img/oxido4.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="./img/oxido5.jpg" alt="" />
+          </div>
+
+          <button class="btn btn-siguiente"> > </button>
+          <button class="btn btn-anterior"> < </button>
+        </div>
+        <!-- fin slider  -->                
+      
+
+      </div>      
+    </div>
+
+    <div class="diagonal contacto" id="Contacto">
+      <div class="contenido">
+        <h1>Contacto</h1>
+        
+        <form id="form-contacto" action="" method="post">
+          <h4>Hablemos! Dejame tu mensaje y te responderé a la brevedad:</h4>
+          <fieldset>
+            <input placeholder="Tu nombre" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Tu correo" type="email" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Tu teléfono (opcional)" type="tel" tabindex="3" required>
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Escribí tu mensaje acá..." tabindex="4" required></textarea>
+          </fieldset>
+          <fieldset>
+            <input type="button" onclick="enviar()" value="Enviar" id="boton-enviar">
+            <script>
+              function enviar() {
+                // Simula mensaje enviado:
+                alert("Enviado!")
+              }
+            </script>
+          </fieldset>
+        </form>
+        
+        <div class="social">
+          <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="./img/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="./img/reddit.png" alt="Reddit"></a>
+          <a href="#"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+        </div>
+
+
+      </div>      
+    </div>
+
+    <footer>
+      <div id="footer">
+          <p>Primeros pasos del desarrollo frontend</p>
+          
+            <a href="https://www.ticmas.com/"  target="_blank">
+              <img src="./img/ticmas.png" alt="Logo Ticmas">
+            </a>
+            
+            <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa"  target="_blank">
+              <img src="./img/ap40.png" alt="Logo Argentina Programa 4.0">
+            </a>
+          
+      </br>
+    </footer>
+  
+</body>
+</html>

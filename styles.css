@@ -1,0 +1,466 @@
+/* =================================== */
+/*          Estilos generales          */
+/* =================================== */
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: 0px;
+  list-style:none;
+}
+
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #121212;
+  margin: 0;
+}
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =================================== */
+/* Estilos para la barra de navegación */
+/* =================================== */
+
+#nav-main {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 0 10%;
+  background-color: #15202B;
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 20;
+}
+
+#nav-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color:burlywood;
+}
+
+#nav-shutter {
+  height: 2rem;
+}
+
+#nav-shutter:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+#nav-nombre {
+  margin-left: 0.5rem;
+}
+
+#nav-photo {
+ transition:all 300ms ease;
+}
+
+#nav-photo:hover {
+  color:coral;
+}
+
+#jc {
+  font-weight:bolder;
+  color: aqua;
+  margin-right: 0.25rem;
+  font-size: 1.2rem;
+}
+
+
+#nav-menu {
+  display: flex;
+  color:burlywood;
+}
+
+.nav-menu-item {
+  margin: 0 0.3rem;
+  transition:all 300ms ease;
+}
+
+.nav-menu-item:hover {
+  color: aqua;
+}
+
+
+@media screen and (max-width: 600px) {
+  #main-nav {
+    padding: 0 1rem;
+  }
+
+  #nav-photo {
+    display: none;
+   }
+
+}
+
+
+
+
+/* =================================== */
+/*         Estilos principales         */
+/* =================================== */
+
+.diagonal {
+  position: relative;
+  padding: 7vw 0;
+  display: grid;
+  place-items: center;
+  
+}
+
+.diagonal::before {
+  content: "";
+	position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  min-height: 50vh;
+}
+
+.home {
+  margin-top: 5vw;
+  transform: skewY(-6deg);
+  z-index: 2;  
+  background-image: linear-gradient(45deg, rgba(85, 83, 132, .9), rgba(131, 74, 124, .9)), url("./img/rust.jpg");
+  background-size: cover;
+}
+
+
+.portfolio {
+  margin-top: 1.5rem;
+}
+.portfolio::before {
+  transform: skewY(-6deg);
+  background-image: linear-gradient(45deg, rgba(85, 0, 0, .9), rgba(131, 74, 124, .9)), url("./img/rust.jpg");
+  background-size: cover;
+}
+
+
+.contacto {
+  margin-top: 1.5rem;
+}
+
+.contacto::before {
+  background-image: linear-gradient(45deg, rgba(85, 39, 0, .9), rgb(131, 74, 124, .9)), url("./img/rust.jpg");
+  background-size: cover;
+  transform: skewY(-6deg);
+}
+
+.contenido {
+  max-width: 70vw;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  min-height: 80vh;
+}
+
+
+.foto-perfil {
+  max-width: 30%;
+  border-radius: 0 0 0 30%;
+  float: right;
+}
+
+
+.img-portfolio {
+  width: 100%;
+}
+
+.contenido h1 {
+  font-size: 3rem;
+  color:burlywood;
+  line-height: 3rem;
+}
+
+.texto-intro p {
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+.smooth {
+  scroll-behavior: smooth;
+}
+
+.social {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social img {
+  width: 2rem;
+  margin: 0 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .contenido {
+    max-width: 85vw;
+  }
+
+  .foto-perfil {
+    max-width: 35vw;
+  }
+
+  .home {
+    margin-top: 15vw;
+  }
+
+  .social img {
+    width: 1.5rem;
+    margin: 0 1rem;
+  }
+}
+
+
+
+
+/* =================================== */
+/*        Estilos para el footer       */
+/* =================================== */
+
+
+#footer {
+  height: 100px;
+  background: #15202B;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#footer p {
+  font-size: 0.9rem;
+  color:burlywood;
+  
+  
+}
+
+#footer img {
+  height: 30px;
+  margin: 0 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  #footer {
+    display: block;
+    text-align: center;
+    
+  }
+
+  #footer img {
+    height: 25px;
+  }
+
+  #footer p {
+    padding-top: 20px;
+  }
+}
+
+
+
+/* =================================== */
+/*        Estilos para el slider       */
+/* =================================== */
+
+.slider {
+  width: 100vw;
+  max-width: 800px;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.slide {
+  width: 100vw;
+  max-width: 800px;
+  height: 60vh;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+.btn:active {
+  transform: scale(1.1);
+}
+.btn-anterior {
+  top: 45%;
+  left: 2%;
+}
+
+.btn-siguiente {
+  top: 45%;
+  right: 2%;
+}
+
+@media screen and (max-width: 600px) {
+  .slider, .slide {
+    width: 85vw;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .slider, .slide {
+    width: 70vw;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  .slider, .slide {
+    width: 60vw;
+  }
+}
+
+
+/* =================================== */
+/*     Estilos para el formulario      */
+/* =================================== */
+
+#form-contacto input[type="text"],
+#form-contacto input[type="email"],
+#form-contacto input[type="tel"],
+#form-contacto input[type="url"],
+#form-contacto textarea,
+#form-contacto button[type="submit"] {
+  font: 400 0.8rem "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#form-contacto {
+  background-image: linear-gradient(45deg, #550000, #834A7C);
+  padding: 2rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 25px;
+  width: 50vw;
+}
+
+#form-contacto h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#form-contacto h4 {
+  margin: 10px 0 20px;
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: white;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#form-contacto input[type="text"],
+#form-contacto input[type="email"],
+#form-contacto input[type="tel"],
+#form-contacto input[type="url"],
+#form-contacto textarea {
+  width: 100%;
+  border: 1px solid transparent;
+  background:burlywood;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#form-contacto textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#boton-enviar {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #834A7C;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#boton-enviar:hover {
+  background: aqua;
+  color: black;
+  transition: background-color 100ms ease-in-out;
+}
+
+#boton-enviar:active {
+  background: #006666;
+}
+
+
+#form-contacto input:focus,
+#form-contacto textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+
+@media screen and (max-width: 600px) {
+  #form-contacto {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  #form-contacto {
+    width: 70vw;
+  }
+}
